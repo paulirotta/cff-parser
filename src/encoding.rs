@@ -154,7 +154,7 @@ impl Encoding<'_> {
                     .write_all(b"PDF 'Expert encoding' is not standardized and not supported. Consider using optical character recognition (OCR")
                     .unwrap();
 
-                STANDARD_ENCODING.to_vec()
+                vec![]
             }
             EncodingKind::Format0(ref encoding) => encoding.clone().into_iter().collect(),
             EncodingKind::Format1(ref table) => {
